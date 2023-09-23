@@ -20,17 +20,17 @@ export default function Home() {
     {
       imagem: imagem1,
       titulo: 'Aproximar para incluir',
-      texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim nisi, pellentesque lacinia aliquet nec, mollis eu nibh. Nulla facilisi. Donec et eros volutpat, rhoncus lorem sed, iaculis enim. Pellentesque eu purus sit amet quam consequat auctor ut ac felis. Nulla leo justo, commodo sit amet quam eu, tristique eleifend enim. Etiam venenatis in tellus in cursus. Phasellus imperdiet turpis et odio volutpat, in scelerisque urna congue. Duis sollicitudin nisi arcu, at blandit orci maximus nec. Nunc in dolor in erat lacinia pharetra nec vel ante. Etiam sit amet ligula felis. Aenean hendrerit cursus finibus. Sed vel dictum est. Sed sit amet nunc id lacus tempor tempor non id neque. Maecenas a porttitor turpis.'
+      texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim nisi, pellentesque lacinia aliquet nec, mollis eu nibh. Nulla facilisi. Donec et eros volutpat, rhoncus lorem sed, iaculis enim. Pellentesque eu purus sit amet quam consequat auctor ut ac felis. Nulla leo justo, commodo sit amet quam eu, tristique eleifend enim. Etiam venenatis in tellus in cursus. Phasellus imperdiet turpis et odio volutpat, in scelerisque urna congue. '
     },
     {
       imagem: imagem2,
       titulo: 'Gerdau Mais',
-      texto: 'Quisque pellentesque euismod dui, eu euismod enim luctus eget. In eu nunc felis. Nam scelerisque, magna vitae scelerisque fermentum, odio libero varius dui, quis tristique metus justo eget metus. Pellentesque vel orci vehicula, auctor nulla congue, lacinia sem. Nulla ultrices turpis quis bibendum convallis. Ut nec libero sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla cursus, est nec molestie viverra, risus ante rhoncus purus, non posuere quam leo sit amet purus. Phasellus gravida luctus justo. Praesent efficitur gravida libero id posuere. Duis sit amet arcu leo. Integer interdum consectetur ipsum non efficitur. Mauris vitae luctus purus. Praesent ultricies non tellus in imperdiet. Curabitur accumsan urna eget urna sodales tempor. Etiam tempor felis eu ante malesuada, vehicula dapibus lacus vestibulum.'
+      texto: 'Quisque pellentesque euismod dui, eu euismod enim luctus eget. In eu nunc felis. Nam scelerisque, magna vitae scelerisque fermentum, odio libero varius dui, quis tristique metus justo eget metus. Pellentesque vel orci vehicula, auctor nulla congue, lacinia sem. Nulla ultrices turpis quis bibendum convallis. Ut nec libero sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.  '
     },
     {
       imagem: imagem3,
       titulo: 'O aço oficial do The Town',
-      texto: 'Etiam pharetra, dui quis dapibus eleifend, nibh dolor tincidunt ex, ut porta risus metus ac est. Donec sit amet tempor ex. Curabitur a massa et quam varius feugiat. Nunc odio est, consectetur non ultrices eu, placerat id arcu. Cras blandit est sit amet sodales venenatis. Sed nec cursus neque. Aenean erat quam, placerat ultrices dignissim ut, sagittis a sapien. Pellentesque eu justo sit amet purus finibus bibendum. Quisque sed ipsum quis ex volutpat lobortis vitae ac erat. Suspendisse potenti.'
+      texto: 'Etiam pharetra, dui quis dapibus eleifend, nibh dolor tincidunt ex, ut porta risus metus ac est. Donec sit amet tempor ex. Curabitur a massa et quam varius feugiat. Nunc odio est, consectetur non ultrices eu, placerat id arcu. Cras blandit est sit amet sodales venenatis. Sed nec cursus neque. Aenean erat quam, placerat ultrices dignissim ut, sagittis a sapien. Pellentesque eu justo sit amet purus finibus bibendum. Quisque sed ipsum quis ex volutpat lobortis vitae ac erat.'
     }
 
   ]
