@@ -1,0 +1,85 @@
+.App {
+  align-items: center;
+  background: #036;
+  display: flex;
+  height: calc(100vh - 13rem);
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  width: calc(100vw - 6rem);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+
+.modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 3px solid #036;
+  background-repeat: round;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.swiper {
+  height: 18rem;
+  width: 36rem;
+
+}
+
+.swiper-slide {
+  align-items: center;
+  background-repeat: round;
+  border-radius: 18px;
+  box-shadow: 2px 2px 4px #000;
+  display: flex;
+  font-size: 22px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.playStop{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo{
+  color: #091423;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .swiper {
+    height: 12rem;
+    width: 24rem;
+  
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .App{
+    height: calc(100vh - 11rem);
+  }
+  .swiper {
+    height: 9rem;
+    width: 18rem;
+  
+  }
+}
