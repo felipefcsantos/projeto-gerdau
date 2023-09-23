@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import imagem1 from '../images/Aproximar_para_incluir.png'
 import imagem2 from '../images/Gerdau_mais.png'
-import imagem3 from '../images/O_aço_do_The_Town.png'
+import imagem3 from '../images/O_aco_do_The_Town.png'
 import CancelIcon from '@mui/icons-material/Cancel';
 import StopCircleOutlinedIcon from '@mui/icons-material/StopCircleOutlined';
 import PlayCircleFilledWhiteOutlinedIcon from '@mui/icons-material/PlayCircleFilledWhiteOutlined';
