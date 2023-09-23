@@ -4,7 +4,8 @@ import Header from '../components/Header';
 import ReactModal from 'react-modal';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/effect-cards';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import imagem1 from '../images/Aproximar_para_incluir.png'
 import imagem2 from '../images/Gerdau_mais.png'
 import imagem3 from '../images/O_aco_do_The_Town.png'
@@ -12,7 +13,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import StopCircleOutlinedIcon from '@mui/icons-material/StopCircleOutlined';
 import PlayCircleFilledWhiteOutlinedIcon from '@mui/icons-material/PlayCircleFilledWhiteOutlined';
 
-import { EffectCards } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 
 export default function Home() {
 
@@ -65,19 +66,19 @@ export default function Home() {
           }}
         >
           <CancelIcon
-            sx={{ color: '#036', fontSize: 40, cursor: 'pointer' }}
+            sx={{ color: '#091423', fontSize: 40, cursor: 'pointer' }}
             onClick={() => openCloseModal('')}
           />
           {play
             ? <div className='playStop'>
               <StopCircleOutlinedIcon
-                sx={{ fontSize: 80, cursor: 'pointer', color: '#091423' }}
+                sx={{ fontSize: 150, cursor: 'pointer', color: '#091423' }}
                 onClick={() => setPlay(!play)}
               />
             </div>
             : <div className='playStop'>
               <PlayCircleFilledWhiteOutlinedIcon
-                sx={{ fontSize: 80, cursor: 'pointer', color: '#091423'  }}
+                sx={{ fontSize: 150, cursor: 'pointer', color: '#091423'  }}
                 onClick={() => setPlay(!play)}
               />
             </div>}
@@ -86,10 +87,15 @@ export default function Home() {
           <p>{texto}</p>
         </ReactModal>
 
+        <h1 className='tituloHome'>Veja nossos projetos:</h1>
+
         <Swiper
-          effect={'cards'}
+        navigation={true}
+          pagination={{
+            dynamicBullets: true,
+          }}
           grabCursor={true}
-          modules={[EffectCards]}
+          modules={[Pagination, Navigation]}
           className="mySwiper"
           style={{ zIndex: 0 }}
         >

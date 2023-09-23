@@ -2,11 +2,18 @@
   align-items: center;
   background: #036;
   display: flex;
-  height: calc(100vh - 13rem);
+  flex-direction: column;
+  height: calc(100vh - 9rem);
   justify-content: center;
-  padding: 3rem;
+  padding: 1rem 3rem;
   text-align: center;
   width: calc(100vw - 6rem);
+  
+}
+
+.tituloHome{
+  color: #fcb900;
+  font-size: 3rem;
 }
 
 .ReactModal__Overlay {
@@ -33,12 +40,14 @@
   background-repeat: round;
   border-radius: 20px;
   padding: 20px;
+  overflow-y: auto;
   z-index: 1;
 }
 
 .swiper {
-  height: 18rem;
-  width: 36rem;
+  border-radius: 20px;
+  height: 22rem;
+  width: 44rem;
 
 }
 
@@ -66,8 +75,8 @@
 @media screen and (max-width: 768px) {
   
   .swiper {
-    height: 12rem;
-    width: 24rem;
+    height: 20rem;
+    width: 40rem;
   
   }
 }
@@ -75,7 +84,7 @@
 @media screen and (max-width: 425px) {
   
   .App{
-    height: calc(100vh - 11rem);
+    height: calc(100vh - 7rem);
   }
   .swiper {
     height: 9rem;
