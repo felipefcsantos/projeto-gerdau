@@ -10,8 +10,8 @@ import imagem1 from '../images/Aproximar_para_incluir.png'
 import imagem2 from '../images/Gerdau_mais.png'
 import imagem3 from '../images/O_aco_do_The_Town.png'
 import CancelIcon from '@mui/icons-material/Cancel';
-import StopCircleOutlinedIcon from '@mui/icons-material/StopCircleOutlined';
-import PlayCircleFilledWhiteOutlinedIcon from '@mui/icons-material/PlayCircleFilledWhiteOutlined';
+import StopIcon from '@mui/icons-material/Stop';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
@@ -73,7 +73,7 @@ export default function Home() {
             ? <div className='playStop'>
               <h2>Clique para parar:</h2>
               <button className='button'>
-                <StopCircleOutlinedIcon
+                <StopIcon
                   sx={{ fontSize: 80, cursor: 'pointer', color: '#091423' }}
                   onClick={() => setPlay(!play)}
                 />
@@ -82,7 +82,7 @@ export default function Home() {
             : <div className='playStop'>
               <h2>Clique para reproduzir:</h2>
               <button className='button'>
-                <PlayCircleFilledWhiteOutlinedIcon
+                <PlayArrowIcon
                   sx={{ fontSize: 80, cursor: 'pointer', color: '#091423' }}
                   onClick={() => setPlay(!play)}
                 />
@@ -100,13 +100,13 @@ export default function Home() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={'auto'}
-          loop={true}
+          // loop={true}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
             depth: 500,
             modifier: 3,
-            slideShadows: true,
+            slideShadows: false,
           }}
           pagination={true}
           modules={[EffectCoverflow, Pagination]}
