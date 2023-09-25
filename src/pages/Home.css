@@ -3,7 +3,7 @@
   background: #036;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 9rem);
+  height: calc(100vh - 9.2rem);
   justify-content: center;
   padding: 1rem 3rem;
   text-align: center;
@@ -39,33 +39,46 @@
   border: 3px solid #036;
   background-repeat: round;
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   overflow-y: auto;
   z-index: 1;
 }
 
 .swiper {
-  border-radius: 20px;
-  height: 22rem;
-  width: 44rem;
-
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .swiper-slide {
-  align-items: center;
-  background-repeat: round;
-  border-radius: 18px;
-  box-shadow: 2px 2px 4px #000;
-  display: flex;
-  font-size: 22px;
-  font-weight: bold;
-  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
+.swiper-slide img {
+  /* display: block; */
+  height: 100%;
+  width: 70%;
+}
 .playStop{
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin-top: 2rem;
+}
+
+.button{
+  background: #fcb900;
+  border: 5px solid #036;
+  border-radius: 50%;
+  box-shadow: 5px 5px 7px #091423;
+  &:active{
+    background: #f5cc5b;
+    box-shadow: none;
+  }
 }
 
 .titulo{
@@ -74,11 +87,11 @@
 
 @media screen and (max-width: 768px) {
   
-  .swiper {
+  /* .swiper {
     height: 20rem;
     width: 40rem;
   
-  }
+  } */
 }
 
 @media screen and (max-width: 425px) {

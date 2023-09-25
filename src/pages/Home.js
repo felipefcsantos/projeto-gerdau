@@ -5,7 +5,7 @@ import ReactModal from 'react-modal';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
 import imagem1 from '../images/Aproximar_para_incluir.png'
 import imagem2 from '../images/Gerdau_mais.png'
 import imagem3 from '../images/O_aco_do_The_Town.png'
@@ -13,7 +13,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import StopCircleOutlinedIcon from '@mui/icons-material/StopCircleOutlined';
 import PlayCircleFilledWhiteOutlinedIcon from '@mui/icons-material/PlayCircleFilledWhiteOutlined';
 
-import { Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 export default function Home() {
 
@@ -31,7 +31,7 @@ export default function Home() {
     {
       imagem: imagem3,
       titulo: 'O aço oficial do The Town',
-      texto: 'Etiam pharetra, dui quis dapibus eleifend, nibh dolor tincidunt ex, ut porta risus metus ac est. Donec sit amet tempor ex. Curabitur a massa et quam varius feugiat. Nunc odio est, consectetur non ultrices eu, placerat id arcu. Cras blandit est sit amet sodales venenatis. Sed nec cursus neque. Aenean erat quam, placerat ultrices dignissim ut, sagittis a sapien. Pellentesque eu justo sit amet purus finibus bibendum. Quisque sed ipsum quis ex volutpat lobortis vitae ac erat.'
+      texto: 'Etiam pharetra, dui quis dapibus eleifend, nibh dolor tincidunt ex, ut porta risus metus ac est. Donec sit amet tempor ex. Curabitur a massa et quam varius feugiat. Nunc odio est, consectetur non ultrices eu, placerat id arcu. Cras blandit est sit amet sodales venenatis. Sed nec cursus neque. Aenean erat quam, placerat ultrices dignissim ut, sagittis a sapien. Pellentesque eu justo sit amet purus finibus bibendum.'
     }
 
   ]
@@ -71,16 +71,22 @@ export default function Home() {
           />
           {play
             ? <div className='playStop'>
-              <StopCircleOutlinedIcon
-                sx={{ fontSize: 150, cursor: 'pointer', color: '#091423' }}
-                onClick={() => setPlay(!play)}
-              />
+              <h2>Clique para parar:</h2>
+              <button className='button'>
+                <StopCircleOutlinedIcon
+                  sx={{ fontSize: 80, cursor: 'pointer', color: '#091423' }}
+                  onClick={() => setPlay(!play)}
+                />
+              </button >
             </div>
             : <div className='playStop'>
-              <PlayCircleFilledWhiteOutlinedIcon
-                sx={{ fontSize: 150, cursor: 'pointer', color: '#091423'  }}
-                onClick={() => setPlay(!play)}
-              />
+              <h2>Clique para reproduzir:</h2>
+              <button className='button'>
+                <PlayCircleFilledWhiteOutlinedIcon
+                  sx={{ fontSize: 80, cursor: 'pointer', color: '#091423' }}
+                  onClick={() => setPlay(!play)}
+                />
+              </button>
             </div>}
 
           <h1 className='titulo'>{titulo}</h1>
@@ -90,20 +96,29 @@ export default function Home() {
         <h1 className='tituloHome'>Veja nossos projetos:</h1>
 
         <Swiper
-        navigation={true}
-          pagination={{
-            dynamicBullets: true,
-          }}
+          effect={'coverflow'}
           grabCursor={true}
-          modules={[Pagination, Navigation]}
+          centeredSlides={true}
+          slidesPerView={'auto'}
+          loop={true}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 500,
+            modifier: 3,
+            slideShadows: true,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
           style={{ zIndex: 0 }}
         >
           {slides.map((item) => (
             <SwiperSlide
-              style={{ backgroundImage: `url(${item.imagem})` }}
               onClick={() => openCloseModal(item.imagem, item.titulo, item.texto)}
-            />
+            >
+              <img src={item.imagem} alt='Thumbnail' />
+            </SwiperSlide>
 
           ))}
         </Swiper>
